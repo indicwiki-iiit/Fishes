@@ -1,0 +1,181 @@
+{%- macro infobox(binomialName, img, class, order, family, subfamily, genus, authors_1, year) -%}
+{{'{{Taxobox'}}
+| name = ''{{binomialName}}''{{'\n'}}
+{%- if img != '' -%}
+| image = {{img}}{{'\n'}}
+{%- endif -%}
+| regnum = [[जंतु]]
+| phylum = [[कॉर्डेटा]]
+| classis = [[{{class}}]]
+| ordo =  [[{{order}}]]
+| familia = [[{{family}}]]
+{%- if subfamily != '' -%}
+{{'\n'}}| subfamilia = [[{{subfamily}}]]{{'\n'}}
+{%- endif -%}
+| genus = ''[[{{genus}}]]''   
+| binomial = '''''{{binomialName}}'''''
+| binomial_authority = ({{authors_1}}, {{year}})
+}}
+{%- endmacro -%}
+
+{%- macro introductionSec(ID,binomialName, binomialName_eng, commonName, genus, family, order, class, authors_2, year, area, depthRange,depthRef,checkDepth) -%}
+{{'\n'}}
+'''''{{binomialName}}''''' (''{{binomialName_eng}}'')
+{%- if commonName != '' -%}
+, जिसे आमतौर पर '''{{commonName}}'''<ref>FishBase, [https://www.fishbase.de/comnames/CommonNamesList.php?ID={{ID}} Common names of ''{{binomialName_eng}}'].</ref> के नाम से जाना जाता है,
+{%- endif -%}
+{{" "}}[[मछली|मछलियों]] के एक ''[[{{genus}}]]'' वंश की एक [[जाति (जीवविज्ञान)|प्रजाति]] है जो [[{{family}}]] कुल के [[{{order}}]] गण से संबंधित है। यह [[जंतु]] जगत के [[{{class}}]] वर्ग की सदस्य है। इनका वर्णन पहली बार {{authors_2}} ने वर्ष {{year}} में किया था।
+{%- if area != '' -%}
+{{' '}}ये प्रजातियां मुख्य रूप से {{area}} <ref>Froese, Rainer; Pauly, Daniel (eds.) (2022). "[https://www.fishbase.de/summary/{{ID}}''{{binomialName_eng}}'']" in FishBase.</ref> में पायी जाती हैं। 
+{%- endif -%}
+{%- if depthRange != '' -%}
+{{' '}}इन प्रजातियों की मछलियाँ मुख्य रूप से {{depthRange}} मीटर
+
+{%- if checkDepth != '' -%}
+<ref>FishBase, [https://www.fishbase.de/references/FBRefSummary.php?ID={{depthRef|int}}  Reference No. {{depthRef|int}}]</ref>
+{%- endif -%}
+{{' '}}की गहराई पर स्थित होती हैं। 
+{%- endif -%}
+{%- endmacro -%}
+
+{%- macro descriptionSec(binomialName,maxLen,maxWeight,maxAge,status,statusDefn,statusRef,fisheries,bait,gamefish,aquarium,threat) -%}
+{%- if maxLen != '' or maxWeight != '' or maxAge != '' or status != ''-%}
+{{'\n'}}
+== विवरण ==
+{%- if maxLen != '' or maxWeight != '' or maxAge != ''-%}
+{{'\n'}}''{{binomialName}}'' मछलियाँ शरीर के आकार और पंख विन्यास में बहुत भिन्न होती हैं। 
+{%- endif -%}
+{%- if maxLen != ''-%}
+{{' '}}वे अधिकतम {{maxLen}} सेंटीमीटर की लंबाई तक विकसित होती है।
+{%- endif -%}
+{%- if maxWeight != ''-%} 
+{{' '}}इन प्रजातियों का अब तक का सबसे अधिक वजन {{maxWeight}} दर्ज किया गया है।
+{%- endif -%}
+{%- if maxAge != ''-%} 
+{{' '}}इष्टतम परिस्थितियों में, ''{{binomialName}}'' {{maxAge}} वर्षों से भी अधिक समय तक जीवित रहती हैं।
+{%- endif -%}
+{%- if status != '' -%} 
+{{'\n\n'}}[[International Union for Conservation of Nature|अंतर्राष्ट्रीय प्रकृति संरक्षण संघ]] (IUCN) की [[आईयूसीएन लाल सूची |संकटग्रस्त जातियों की लाल सूची]] सभी जैविक प्रजातियों की वैश्विक संरक्षण स्थिति की सबसे व्यापक तालिका है। इस सूची में इन प्रजातियों को [[{{status}}]]
+{%- if statusRef != '' -%} 
+<ref>{{statusRef}}</ref>
+{%- endif -%}
+{{' '}}श्रेणी में डाला है यानी, {{statusDefn}}
+{%- endif -%}
+{%- if fisheries != ''-%} 
+{{'\n\n'}}मछलियाँ दुनिया भर में मनुष्यों के लिए एक महत्वपूर्ण संसाधन हैं, खासकर भोजन के रूप में। {{fisheries}}
+{%- endif -%}
+{%- if bait != ''-%}
+{{' '}}''{{binomialName}}'' को {{bait}}
+{%- endif -%}
+{%- if gamefish != ''-%}
+{{' '}}{{gamefish}}
+{%- endif -%}
+{%- if aquarium != ''-%}
+{{' '}}{{aquarium}}
+{%- endif -%}
+{%- if threat != ''-%}
+{{' '}}{{threat}}
+{%- endif -%}
+{%- endif -%}
+{%- endmacro -%}
+
+{%- macro habitatSec(binomialName,environment,habitat,habitatDefn,pH,dH,lastRef,climate,climateRef) -%}
+{%- if environment != '' or habitat != '' -%}
+{{'\n'}}
+== प्राकृतिक वास ==
+मछली की विभिन्न प्रजातियों अलग-अलग [[पर्यावास|प्राकृतिक वासों]] में पाई जाती हैं।
+{%- if environment != '' -%} 
+{{' '}}इन मछलियों के समुदाय आमतौर पर {{environment}} में पाए जाते हैं।
+{%- endif -%}
+{%- if habitat != '' -%}  
+{{' '}}इन प्रजातियां को {{habitat}} मछलियाँ कहा जाता हैं अर्थात {{habitatDefn}}
+{%- endif -%}
+{%- if pH != '' -%} 
+{{' '}}[[pH|पीएच]] रेंज, जो यह मापने का एक तरीका है कि पानी [[अम्ल |अम्लीय]] है या [[क्षार (रसायन विज्ञान)|क्षारीय]], मछलियों के स्वास्थ्य, विकास और प्रजनन के लिए बहुत आवश्यक है। {{pH}} पीएच इन प्रजातियों की मछलियों के लिए इष्टतम माना जाता है। 
+{%- endif -%}
+{%- if dH != '' -%}
+{{' '}}मछलियों के लिए [[कठोर_जल |पानी की कठोरता]] भी काफी महत्वपूर्ण है क्योंकि यह साबित किया गया है कि इसका सीधा प्रभाव नए निषेचित [[अण्डा|अंडों]] पर पड़ता है। {{dH}} dH श्रेणी ''{{binomialName}}'' के लिए वांछनीय मानी जाती है।
+{%- endif -%}
+{%- if lastRef != '' -%}
+<ref>FishBase, [https://www.fishbase.de/references/FBRefSummary.php?ID={{lastRef|int}} Reference No. {{lastRef|int}}]</ref>
+{%- endif -%}
+{%- if climate != '' -%}
+{{' '}}ये प्रजातियां ज्यादातर [[{{climate}}]] जल में पाई जाती हैं।
+{%- endif -%}
+{%- if climateRef != '' -%}
+<ref>FishBase, [https://www.fishbase.de/references/FBRefSummary.php?ID={{climateRef|int}} Reference No. {{climateRef|int}}]</ref>
+{%- endif -%}
+{%- endif -%}
+{%- endmacro -%}
+
+{%- macro migrationSec(binomialName,migration,migrationDefn,migRef) -%}
+{%- if migration != '' -%}
+{{'\n'}}
+== प्रव्रजन ==
+[[मछली प्रव्रजन |मछली प्रव्रजन]] कई मछली जातियों के जीवनक्रम का महत्वपूर्ण हिस्सा होता है। कुछ मछलियाँ अपनी दिनचर्या में प्रत्येक दिन एक स्थान से कुछ मीटर दूर किसी दूसरे स्थान और फिर वापस प्रव्रजन करती हैं और कुछ ऋतुक्रम के अनुसार हज़ारों मील की दूरी तय करती हैं। अधिकतर मछलियाँ आहार-प्राप्ति या प्रजनन के लिए विधिवत स्थानांतरण करती हैं लेकिन कुछ जातियों में प्रव्रजन के लिए कोई स्पष्ट कारण ज्ञात नहीं है। कई प्रकार की मछलियाँ नियमित आधार पर, दैनिक से वार्षिक या उससे अधिक समय के पैमाने पर, और कुछ मीटर से लेकर हजारों किलोमीटर की दूरी तक प्रवास करती हैं। ''{{binomialName}}''  {{migration}} मछलियों की श्रेणी में आती है 
+{%- if migRef != '' -%}
+<ref>FishBase, [https://www.fishbase.de/references/FBRefSummary.php?ID={{migRef|int}} Reference No. {{migRef|int}}]</ref>
+{%- endif -%}
+{{' '}}यानी {{migrationDefn}}
+{%- endif -%}
+{%- endmacro -%}
+
+{%- macro reproductionSec(binomialName,reproduction,reproductionDefn,fertilization,fertilizationDefn) -%}
+{%- if reproduction != '' or fertilization != '' -%}
+{{'\n'}}
+== प्रजनन ==
+मछली के प्र[[जनन]] अंगों में [[वृषण |अंडकोष]] और [[डिम्बग्रंथि|अंडाशय]] शामिल हैं। अधिकांश प्रजातियों में, जननग्रंथियाँ समान आकार के [[बाइलेटेरिया |युग्मित अंग]] होते हैं, जो आंशिक रूप से या पूरी तरह से जुड़े हो सकते हैं। कई माध्यमिक अंग भी हो सकते हैं जो प्रजनन क्षमता को बढ़ाते हैं। 
+{%- if reproduction != '' -%}
+{{' '}}''{{binomialName}}'' प्रजाति {{reproduction}} प्रदर्शित करती है जिसका अर्थ है {{reproductionDefn}}
+{%- endif -%}
+{%- if fertilization != '' -%}
+{{' '}}इन मछलियों {{fertilization}} [[निषेचन|निषेचन]] होता है यानी, {{fertilizationDefn}}
+{%- endif -%}
+{%- endif -%}
+{%- endmacro -%}
+
+{%- macro referencesSec(mainRef,binomialName_eng,genus_eng,species_eng,wikidata,categories) -%}
+{{'\n'}}
+==सन्दर्भ==
+{% raw %}{{Reflist}}{% endraw %}
+
+==ग्रन्थसूची==
+*{{mainRef}}
+
+==बाहरी कड़ियाँ==
+{{'{{'}}Commons|{{binomialName_eng}}{{'}}'}}      
+* {{'{{'}}FishBase | genus = {{genus_eng}} | species = {{species_eng}} | month = August| year = 2022{{'}}'}}
+
+{%- if wikidata != '' -%}
+    {%- if wikidata|length == 1 -%}
+    {{'\n'}}{{ '{{' }}Taxonbar{{'|'}}from={{wikidata.0}}{{'}}'}}
+    {%- endif -%}
+    {%- if wikidata|length > 1 -%}
+    {{'\n'}}{{ '{{' }}Taxonbar|from1={{wikidata.0}}|from2={{wikidata.1}}{{'}}'}}
+    {%- endif -%}
+{%- endif -%}
+
+{%- if categories != '' -%}
+{{'\n'}}
+{{categories}}
+{%- endif -%}
+{{'\n'}}[[Category:हिविकी मछलियाँ]]
+{%- endmacro -%}
+
+{{ infobox(binomialName, img, class, order, family, subfamily, genus, authors_1, year) -}}
+
+{{ introductionSec(ID,binomialName, binomialName_eng, commonName, genus, family, order, class, authors_2, year, area, depthRange,depthRef,checkDepth) -}}
+
+{{ descriptionSec(binomialName,maxLen,maxWeight,maxAge,status,statusDefn,statusRef,fisheries,bait,gamefish,aquarium,threat) -}}
+
+{{ habitatSec(binomialName,environment,habitat,habitatDefn,pH,dH,lastRef,climate,climateRef) -}}
+
+{{ migrationSec(binomialName,migration,migrationDefn,migRef) -}}
+
+{{ reproductionSec(binomialName,reproduction,reproductionDefn,fertilization,fertilizationDefn) -}}
+
+{{ referencesSec(mainRef,binomialName_eng,genus_eng,species_eng,wikidata,categories) -}}
+
+
+
+

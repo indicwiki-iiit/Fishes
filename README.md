@@ -1,5 +1,5 @@
 # Fishes
-This repository contains all the work that was done as a part of enriching Hindi wikipedia in the biomedical domain. The sub-domain chosen is "Fish".
+This repository contains all the work that was done as a part of enriching Hindi wikipedia in the biomedical domain. The sub-domain chosen is "Fishes".
 
 ## Stages of the project
 

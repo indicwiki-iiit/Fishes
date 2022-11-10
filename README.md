@@ -49,7 +49,7 @@ This folder contains various files:
 - [template](./template.j2): it contains the template for the structure of the article.
 - [genXML](./genXML.py): it contains the backbone structure for conversion to XML.
 - [render](./render.py): it contains the code for generating XML dump of articles using the template and the dataset.
-- [fishes50Dump](./fishes50Dump.xml): the testing XML dump file of first 50 fish and their attributes.
+- [fishes50Dump](./fishes50Dump.xml): the testing XML dump file of 50 fish species and their attributes.
 
 
 ## Sample Article

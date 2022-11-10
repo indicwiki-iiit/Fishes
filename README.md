@@ -16,7 +16,7 @@ The following ordered list will give an idea as to what stage the project curren
 - [x] Create template for article generation
 - [x] Review of the template
 - [x] Work on feedback from review of template
-- [x] Create the XML dump for all the diseases to be published
+- [x] Create the XML dump for all the fishes to be published
 
 ## Folders
 

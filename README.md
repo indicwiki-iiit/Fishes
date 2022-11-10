@@ -44,7 +44,7 @@ This folder contains various files:
 - [Img and IUCN Ref Cleaning](./Code/Img%20and%20IUCN%20Ref%20Cleaning.ipynb): Removes the null values(if any). Cleans the Image and IUCN References columns of the master dataset.  
 
 
-### Generating articles
+## Generating articles
 
 - [template](./template.j2): it contains the template for the structure of the article.
 - [genXML](./genXML.py): it contains the backbone structure for conversion to XML.
@@ -52,11 +52,11 @@ This folder contains various files:
 - [fishes50Dump](./fishes50Dump.xml): the testing XML dump file of first 50 fish and their attributes.
 
 
-### Sample Article
+## Sample Article
 
 Click [here](https://hi.wikipedia.org/wiki/%E0%A4%B8%E0%A4%A6%E0%A4%B8%E0%A5%8D%E0%A4%AF:Sanyamx/%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0) to view the sample article.
 
-### Contributors
+## Contributors
 Sanyam Sharma sanyamxsharma@gmail.com <br>
 Aastha Jaipura aasthajaipuria2000@gmail.com
 

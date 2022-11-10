@@ -1,5 +1,5 @@
 # Fishes
-This repository contains all the work that was done as a part of enriching Hindi wikipedia in the biomedical domain. The sub-domain chosen is "Fishes".
+This repository contains all the work that was done as a part of enriching Hindi wikipedia in the biomedical domain. The sub-domain chosen is "Fishes". The aim is to create a large number of articles for different Fishes (34,777 Species) in Hindi.
 
 ## Stages of the project
 
@@ -34,7 +34,7 @@ This folder contains the final dataset as well as some other dataset that have b
 ### Code
 
 This folder contains various files:
-- [Web Scrapping 1](./Code/Web%20Scrapping%201.ipynb): This python notebook contains the code to find and scrape name and ID of all fish species from FishBase.
+- [Web Scrapping 1](./Code/Web%20Scrapping%201.ipynb): This python notebook contains the code to find and scrape the name and ID of all fish species from FishBase.
 - [Web Scraping 2](./Code/Web%20Scrapping%202.ipynb): This python notebook contains the code to scrape the data for all the Fish species collected in Web Scrapping 1.  
 - [Image Extraction](./Code/Image%20Extraction.ipynb): This contains the code used to extract Images of all fish species from Wikipedia.
 - [References Extraction](./Code/References%20Extraction.ipynb): This contains the code used to extract references for Images and other references.
@@ -50,3 +50,13 @@ This folder contains various files:
 - [genXML](./genXML.py): it contains the backbone structure for conversion to XML.
 - [render](./render.py): it contains the code for generating XML dump of articles using the template and the dataset.
 - [fishes50Dump](./fishes50Dump.xml): the testing XML dump file of first 50 fish and their attributes.
+
+
+### Sample Article
+
+Click [here](https://hi.wikipedia.org/wiki/%E0%A4%B8%E0%A4%A6%E0%A4%B8%E0%A5%8D%E0%A4%AF:Sanyamx/%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0) to view the sample article.
+
+### Contributors
+Sanyam Sharma sanyamxsharma@gmail.com <br>
+Aastha Jaipura aasthajaipuria2000@gmail.com
+
